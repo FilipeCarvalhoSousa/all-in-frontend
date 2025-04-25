@@ -1,3 +1,22 @@
 .church {
   margin-top: 10px;
 }
+.button-members {
+  transition: background-color 0.3s ease;
+  text-align: left;
+  text-justify: auto;
+  margin-left: 10px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row; /* Garante que os itens fiquem em linha (horizontalmente) */
+  align-items: start; /* Opcional: alinha os itens verticalmente ao centro */
+}
+
+.col-14 {
+  /* Ocupará o espaço restante */
+  flex-grow: 1;
+  /* Opcional: você pode adicionar margens para espaçamento */
+  margin-left: 16px; /* Exemplo de espaçamento entre o botão e o componente */
+}

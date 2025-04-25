@@ -1,7 +1,14 @@
 <div class="menu">
   <div class="row">
     <div class="text-menu">
-      <mat-tab-group mat-stretch-tabs="false" animationDuration="2000ms" mat-align-tabs="center">
+      <button mat-button (click)="openHome()">Home</button>
+      <button mat-button (click)="openChurch()">Church</button>
+      <button mat-button (click)="openSmAcai()">SM Acaí</button>
+      <button mat-button (click)="openBrazilianAutomoveis()">Brazilian Automóveis</button>
+
+
+
+      <!-- <mat-tab-group mat-stretch-tabs="false" animationDuration="2000ms" mat-align-tabs="center">
         <mat-tab style="color: white;" label="Home">
           <app-main-screen></app-main-screen>
         </mat-tab>
@@ -14,7 +21,7 @@
         <mat-tab label="SM Açaí">
           <app-sm-acai></app-sm-acai>
         </mat-tab>
-      </mat-tab-group>
+      </mat-tab-group> -->
     </div>
   </div>
   <div class="row">

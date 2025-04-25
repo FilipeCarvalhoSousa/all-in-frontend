@@ -9,11 +9,14 @@ import { Route, Router } from '@angular/router';
 export class ChurchComponent {
   constructor(private readonly router: Router) { }
 
+  showMembrosList: boolean = false;
+
   membrosList() {
-    this.router.navigate(['/membros']);
+    this.showMembrosList = !this.showMembrosList;
   }
 
   ngOnInit(): void {
+    console.log('chegou aqui');
     // Any initialization logic can go here
   }
 

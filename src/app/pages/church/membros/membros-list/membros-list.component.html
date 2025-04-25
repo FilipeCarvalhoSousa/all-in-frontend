@@ -1,0 +1,76 @@
+<div class="membrosList">
+  <div class="church" *ngIf="membrosList.length === 0">
+    <div class="row">
+      <div class="col-16">
+        <h3>Em breve, eles aparecerão aqui</h3>
+      </div>
+    </div>
+  </div>
+  <div class="church" *ngIf="membrosList.length > 0">
+    <div class="row">
+      <div class="col-16">
+        <h3>Lista de Membros da Igreja Cristão - Riacho Fundo 2</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-16">
+        <table mat-table [dataSource]="membrosList" class="mat-elevation-z8 demo-table">
+          <!-- Position Column -->
+          <ng-container matColumnDef="nome">
+            <th mat-header-cell *matHeaderCellDef> Nome </th>
+            <td mat-cell *matCellDef="let membro"> {{membro.nome}} </td>
+          </ng-container>
+          '', '', '', '', '', 'estado_civil', 'sexo'
+
+          <!-- Name Column -->
+          <ng-container matColumnDef="data_nascimento">
+            <th mat-header-cell *matHeaderCellDef> Data de Nascimento </th>
+            <td mat-cell *matCellDef="let membro"> {{membro.data_nascimento}} </td>
+          </ng-container>
+
+          <!-- Weight Column -->
+          <ng-container matColumnDef="situacao">
+            <th mat-header-cell *matHeaderCellDef> Situação </th>
+            <td mat-cell *matCellDef="let membro"> {{membro.situacao}} </td>
+          </ng-container>
+
+          <!-- Symbol Column -->
+          <ng-container matColumnDef="email">
+            <th mat-header-cell *matHeaderCellDef> Email </th>
+            <td mat-cell *matCellDef="let membro"> {{membro.email}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="telefone">
+            <th mat-header-cell *matHeaderCellDef> Telefone </th>
+            <td mat-cell *matCellDef="let membro"> {{membro.telefone}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="estado_civil">
+            <th mat-header-cell *matHeaderCellDef> Estado Civil </th>
+            <td mat-cell *matCellDef="let membro"> {{membro.estado_civil}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="sexo">
+            <th mat-header-cell *matHeaderCellDef> Sexo </th>
+            <td mat-cell *matCellDef="let membro"> {{membro.sexo}} </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+      </div>
+      <div class="button-container">
+        <button mat-fab extended color="primary" (click)="addData()">
+          <mat-icon>add_circle</mat-icon>
+          Adicionar Membro
+        </button>
+        <button mat-fab extended color="warn" (click)="removeData()" [disabled]="!dataSource.length"
+          (click)="removeData()" class="demo-button">
+          <mat-icon>delete</mat-icon>
+          Remove Data
+        </button>
+      </div>
+    </div>
+  </div>
+  <div>

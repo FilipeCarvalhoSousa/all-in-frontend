@@ -1,14 +1,13 @@
 <div class="church">
   <div class="row">
-    <div class="col-16">
+    <div class="col-2 button-members">
       <button mat-fab extended color="primary" (click)="membrosList()">
           <mat-icon>people</mat-icon>
           Membros
         </button>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-16">
+    <div class="col-14" *ngIf="showMembrosList">
+      <app-membros-list></app-membros-list>
     </div>
   </div>
 </div>

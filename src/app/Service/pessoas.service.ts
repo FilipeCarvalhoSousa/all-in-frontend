@@ -11,8 +11,14 @@ export class PessoasService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getAllMembros(): Observable<any[]> {
+  getAllPessoas(): Observable<any[]> {
     const url = `${this.apiUrl}/pessoa`
     return this.httpClient.get<any[]>(url);
   }
+
+  incluirPessoa(pessoa: any): Observable<any> {
+    const url = `${this.apiUrl}/pessoa`;
+    return this.httpClient.post<any>(url, pessoa);
+  }
+
 }

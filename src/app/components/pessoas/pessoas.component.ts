@@ -14,7 +14,7 @@ export class PessoasComponent {
   }
 
   getAllMembros() {
-    this.pessoasService.getAllMembros().subscribe({
+    this.pessoasService.getAllPessoas().subscribe({
       next: (response: any[]) => {
         console.log('response', response);
       },

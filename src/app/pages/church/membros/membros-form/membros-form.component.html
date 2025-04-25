@@ -1,0 +1,33 @@
+<div class="membrosList">
+  <div class="church">
+    <div class="row">
+      <div class="col-16">
+        <h3>Cadastro de Membros</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-16">
+        <mat-form-field
+          [hideRequiredMarker]="hideRequiredControl.value"
+          [floatLabel]="getFloatLabelValue()">
+        <mat-select required>
+          <mat-option>-- None --</mat-option>
+          <mat-option value="option">Option</mat-option>
+        </mat-select>
+        <mat-label><mat-icon>favorite</mat-icon> <strong> Fancy</strong> <em> label</em></mat-label>
+      </mat-form-field>
+      </div>
+      <div class="button-container">
+        <button mat-fab extended color="primary" (click)="save()">
+          <mat-icon>add_circle</mat-icon>
+          Add Data
+        </button>
+        <button mat-fab extended color="warn" (click)="cleanForm()"
+        class="demo-button">
+          <mat-icon>delete</mat-icon>
+          Remove Data
+        </button>
+      </div>
+    </div>
+  </div>
+  <div>
