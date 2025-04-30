@@ -33,5 +33,11 @@ export class MenuComponent {
     this.router.navigate(['/brazilian-automoveis']);
   }
 
+  openAdm() {
+    console.log('Church menu clicked');
+
+    this.router.navigate(['/adm']);
+  }
+
   // Add any methods or properties needed for the component here
 }

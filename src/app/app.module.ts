@@ -17,15 +17,15 @@ import { MatMenuModule } from '@angular/material/menu';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './main/header/header.component';
 import { FooterComponent } from './main/footer/footer.component';
-import { PessoasComponent } from './components/pessoas/pessoas.component';
 import { SmAcaiComponent } from './pages/sm-acai/sm-acai.component';
 import { ChurchComponent } from './pages/church/church.component';
 import { BrazilianAutomoveisComponent } from './pages/brazilian-automoveis/brazilian-automoveis.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MenuComponent } from './main/menu/menu.component';
-import { MainScreenComponent } from './main/main-screen/main-screen.component';
 import { MembrosFormComponent } from './pages/church/membros/membros-form/membros-form.component';
 import { MembrosListComponent } from './pages/church/membros/membros-list/membros-list.component';
+import { AdmModule } from './adm/adm.module';
+import { LoginComponent } from './components/login/login.component';
 
 
 @NgModule({
@@ -33,15 +33,14 @@ import { MembrosListComponent } from './pages/church/membros/membros-list/membro
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    PessoasComponent,
     HomeComponent,
     SmAcaiComponent,
     ChurchComponent,
     BrazilianAutomoveisComponent,
     MenuComponent,
-    MainScreenComponent,
     MembrosFormComponent,
     MembrosListComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -57,6 +56,7 @@ import { MembrosListComponent } from './pages/church/membros/membros-list/membro
     MatInputModule,
     MatSelectModule,
     MatMenuModule,
+    AdmModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
